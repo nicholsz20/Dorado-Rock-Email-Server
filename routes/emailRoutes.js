@@ -2,6 +2,14 @@ const express = require("express");
 const router = express.Router();
 const transporter = require("../config/emailConfig");
 
+
+router.options("/", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  res.send();
+});
+
 router.post("/", (req, res) => {
   const { firstName, lastName, email, phone, message } = req.body;
 
