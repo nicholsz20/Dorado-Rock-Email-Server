@@ -4,7 +4,7 @@ const transporter = require("../config/emailConfig");
 
 
 router.options("/", (req, res) => {
-  res.header("Access-Control-Allow-Origin", "http://doradorockllc.com");
+  res.header("Access-Control-Allow-Origin", "http://doradorockllc.com", "https://doradorockllc.com");
   res.header("Access-Control-Allow-Methods", "POST");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
   res.send();
